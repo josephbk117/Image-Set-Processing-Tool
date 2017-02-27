@@ -45,67 +45,85 @@
             // 
             this.InputFolderPathText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputFolderPathText.Location = new System.Drawing.Point(109, 47);
+            this.InputFolderPathText.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.InputFolderPathText.Location = new System.Drawing.Point(159, 56);
             this.InputFolderPathText.Name = "InputFolderPathText";
-            this.InputFolderPathText.Size = new System.Drawing.Size(342, 20);
+            this.InputFolderPathText.Size = new System.Drawing.Size(600, 23);
             this.InputFolderPathText.TabIndex = 0;
             // 
             // OutputFolderPathText
             // 
             this.OutputFolderPathText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OutputFolderPathText.Location = new System.Drawing.Point(109, 73);
+            this.OutputFolderPathText.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.OutputFolderPathText.Location = new System.Drawing.Point(159, 90);
             this.OutputFolderPathText.Name = "OutputFolderPathText";
-            this.OutputFolderPathText.Size = new System.Drawing.Size(342, 20);
+            this.OutputFolderPathText.Size = new System.Drawing.Size(600, 23);
             this.OutputFolderPathText.TabIndex = 1;
             // 
             // performActionBtn
             // 
             this.performActionBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.performActionBtn.Location = new System.Drawing.Point(177, 235);
+            this.performActionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.performActionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.performActionBtn.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performActionBtn.ForeColor = System.Drawing.Color.White;
+            this.performActionBtn.Location = new System.Drawing.Point(309, 293);
             this.performActionBtn.Name = "performActionBtn";
-            this.performActionBtn.Size = new System.Drawing.Size(112, 23);
+            this.performActionBtn.Size = new System.Drawing.Size(146, 32);
             this.performActionBtn.TabIndex = 2;
             this.performActionBtn.Text = "Perform Action";
-            this.performActionBtn.UseVisualStyleBackColor = true;
+            this.performActionBtn.UseVisualStyleBackColor = false;
             this.performActionBtn.Click += new System.EventHandler(this.performActionBtn_Click);
             // 
             // openFolderBtn
             // 
-            this.openFolderBtn.Location = new System.Drawing.Point(7, 46);
+            this.openFolderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.openFolderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.openFolderBtn.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openFolderBtn.ForeColor = System.Drawing.Color.White;
+            this.openFolderBtn.Location = new System.Drawing.Point(7, 55);
             this.openFolderBtn.Name = "openFolderBtn";
-            this.openFolderBtn.Size = new System.Drawing.Size(96, 21);
+            this.openFolderBtn.Size = new System.Drawing.Size(146, 24);
             this.openFolderBtn.TabIndex = 3;
             this.openFolderBtn.Text = "Open Folder";
-            this.openFolderBtn.UseVisualStyleBackColor = true;
+            this.openFolderBtn.UseVisualStyleBackColor = false;
             this.openFolderBtn.Click += new System.EventHandler(this.openFolderBtn_Click);
             // 
             // numberOfFilesLabel
             // 
             this.numberOfFilesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numberOfFilesLabel.AutoSize = true;
-            this.numberOfFilesLabel.Location = new System.Drawing.Point(354, 16);
+            this.numberOfFilesLabel.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfFilesLabel.ForeColor = System.Drawing.Color.White;
+            this.numberOfFilesLabel.Location = new System.Drawing.Point(617, 14);
             this.numberOfFilesLabel.Name = "numberOfFilesLabel";
-            this.numberOfFilesLabel.Size = new System.Drawing.Size(97, 13);
+            this.numberOfFilesLabel.Size = new System.Drawing.Size(142, 15);
             this.numberOfFilesLabel.TabIndex = 4;
             this.numberOfFilesLabel.Text = "Number Of Files : 0";
             // 
             // closeFolderBtn
             // 
-            this.closeFolderBtn.Location = new System.Drawing.Point(7, 72);
+            this.closeFolderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.closeFolderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.closeFolderBtn.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeFolderBtn.ForeColor = System.Drawing.Color.White;
+            this.closeFolderBtn.Location = new System.Drawing.Point(7, 89);
             this.closeFolderBtn.Name = "closeFolderBtn";
-            this.closeFolderBtn.Size = new System.Drawing.Size(96, 21);
+            this.closeFolderBtn.Size = new System.Drawing.Size(146, 24);
             this.closeFolderBtn.TabIndex = 5;
             this.closeFolderBtn.Text = "Output Folder";
-            this.closeFolderBtn.UseVisualStyleBackColor = true;
+            this.closeFolderBtn.UseVisualStyleBackColor = false;
             this.closeFolderBtn.Click += new System.EventHandler(this.closeFolderBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 105);
+            this.label1.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 146);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(141, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Output File Prefix : ";
             // 
@@ -113,9 +131,10 @@
             // 
             this.prefixTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.prefixTextBox.Location = new System.Drawing.Point(109, 102);
+            this.prefixTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.prefixTextBox.Location = new System.Drawing.Point(159, 143);
             this.prefixTextBox.Name = "prefixTextBox";
-            this.prefixTextBox.Size = new System.Drawing.Size(342, 20);
+            this.prefixTextBox.Size = new System.Drawing.Size(600, 23);
             this.prefixTextBox.TabIndex = 7;
             // 
             // richTextBox
@@ -123,36 +142,44 @@
             this.richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox.Location = new System.Drawing.Point(12, 128);
+            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(12, 172);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(439, 92);
+            this.richTextBox.Size = new System.Drawing.Size(747, 115);
             this.richTextBox.TabIndex = 9;
             this.richTextBox.Text = "";
             // 
             // pythonLocationBtn
             // 
+            this.pythonLocationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.pythonLocationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pythonLocationBtn.Font = new System.Drawing.Font("Orbitron", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pythonLocationBtn.ForeColor = System.Drawing.Color.White;
             this.pythonLocationBtn.Location = new System.Drawing.Point(7, 12);
             this.pythonLocationBtn.Name = "pythonLocationBtn";
-            this.pythonLocationBtn.Size = new System.Drawing.Size(96, 21);
+            this.pythonLocationBtn.Size = new System.Drawing.Size(146, 24);
             this.pythonLocationBtn.TabIndex = 10;
             this.pythonLocationBtn.Text = "Python Location";
-            this.pythonLocationBtn.UseVisualStyleBackColor = true;
+            this.pythonLocationBtn.UseVisualStyleBackColor = false;
             this.pythonLocationBtn.Click += new System.EventHandler(this.pythonLocationBtn_Click);
             // 
             // pythonLocationTextBox
             // 
             this.pythonLocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pythonLocationTextBox.Location = new System.Drawing.Point(109, 12);
+            this.pythonLocationTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pythonLocationTextBox.Location = new System.Drawing.Point(159, 12);
             this.pythonLocationTextBox.Name = "pythonLocationTextBox";
-            this.pythonLocationTextBox.Size = new System.Drawing.Size(239, 20);
+            this.pythonLocationTextBox.Size = new System.Drawing.Size(444, 23);
             this.pythonLocationTextBox.TabIndex = 11;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 270);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
+            this.ClientSize = new System.Drawing.Size(771, 337);
             this.Controls.Add(this.pythonLocationTextBox);
             this.Controls.Add(this.pythonLocationBtn);
             this.Controls.Add(this.richTextBox);

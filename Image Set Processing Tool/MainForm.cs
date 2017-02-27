@@ -46,6 +46,13 @@ namespace Image_Set_Processing_Tool
 
         private void performActionBtn_Click(object sender, EventArgs e)
         {
+
+            if (filesInFolder == null)
+            {
+                MessageBox.Show("Error : No Files To Process");
+                return;
+            }
+
             string actions = richTextBox.Text;
             List<string> cmds = actions.Split(' ').ToList<string>();
             actions = "";
