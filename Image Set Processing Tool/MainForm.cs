@@ -19,6 +19,7 @@ namespace Image_Set_Processing_Tool
         List<string> filesInFolder;
 
         private string outputFolderPath = "";
+        private string pythonLocation = "";
         public MainForm()
         {
             InitializeComponent();
@@ -60,14 +61,16 @@ namespace Image_Set_Processing_Tool
                 prefixText = "\\"+prefixTextBox.Text+"_";
             else
                 prefixText = "\\Output_";
-            process.StartInfo.FileName = "C:\\Users\\josep_000\\AppData\\Local\\Programs\\Python\\Python35\\python.exe";
+            if (pythonLocation == string.Empty)
+                process.StartInfo.FileName = "C:\\Users\\josep_000\\AppData\\Local\\Programs\\Python\\Python35\\python.exe";
+            else
+                process.StartInfo.FileName = pythonLocation;
             
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardInput = true;
             process.StartInfo.RedirectStandardOutput = true;
-
-            for (int i = 0; i < filesInFolder.Count; i++)
+         for (int i = 0; i < filesInFolder.Count; i++)
             {
                 string input = "\""+filesInFolder[i]+"\"";
                 process.StartInfo.Arguments = "ProcessImage.py " + input + outputFolderPath + prefixText + i + ".png\"" + actions;
@@ -84,9 +87,30 @@ namespace Image_Set_Processing_Tool
         {
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                outputFolderPath = " \"" + fbd.SelectedPath.Trim();
-                Console.WriteLine("Output path = " + outputFolderPath);
+                outputFolderPath = " \"" + fbd.SelectedPath.Trim();                
                 OutputFolderPathText.Text = fbd.SelectedPath;
+            }
+        }
+
+        private void pythonLocationBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            { 
+                if (!ofd.SafeFileName.EndsWith("python.exe"))
+                {
+                    MessageBox.Show("Make sure it's the python.exe file");
+                    return;
+                }
+                pythonLocation = ofd.FileName;
+                pythonLocationTextBox.Text = pythonLocation;
+                FileStream fs = new FileStream("storedvalues.xaz", FileMode.Create);
+                BinaryWriter wr = new BinaryWriter(fs);
+
+                wr.Write(pythonLocation);
+
+                wr.Close();
+                fs.Close();
             }
         }
     }

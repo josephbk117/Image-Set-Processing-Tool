@@ -7,6 +7,7 @@ img1 = cv2.imread(argList[1])
 
 i = 2
 
+
 def performAction(action):
     global i
     global img1
@@ -18,6 +19,11 @@ def performAction(action):
         img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     if action == "laplace":
         img1 = cv2.Laplacian(img1, cv2.CV_64F)
+    if action == "blur":
+        sigmaVal = int(argList[i+1])
+        if sigmaVal%2 == 0:
+            sigmaVal += 1
+        img1 = cv2.GaussianBlur(img1,(sigmaVal,sigmaVal),0)
 
 
 while (i < len(argList)):
