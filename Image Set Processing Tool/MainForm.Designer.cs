@@ -39,6 +39,8 @@
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.pythonLocationBtn = new System.Windows.Forms.Button();
             this.pythonLocationTextBox = new System.Windows.Forms.TextBox();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // InputFolderPathText
@@ -68,7 +70,7 @@
             this.performActionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.performActionBtn.Font = new System.Drawing.Font("Orbitron", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.performActionBtn.ForeColor = System.Drawing.Color.White;
-            this.performActionBtn.Location = new System.Drawing.Point(309, 293);
+            this.performActionBtn.Location = new System.Drawing.Point(308, 302);
             this.performActionBtn.Name = "performActionBtn";
             this.performActionBtn.Size = new System.Drawing.Size(146, 32);
             this.performActionBtn.TabIndex = 2;
@@ -146,7 +148,7 @@
             this.richTextBox.Font = new System.Drawing.Font("Orbitron", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox.Location = new System.Drawing.Point(12, 172);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(747, 115);
+            this.richTextBox.Size = new System.Drawing.Size(747, 124);
             this.richTextBox.TabIndex = 9;
             this.richTextBox.Text = "";
             // 
@@ -174,12 +176,31 @@
             this.pythonLocationTextBox.Size = new System.Drawing.Size(444, 23);
             this.pythonLocationTextBox.TabIndex = 11;
             // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.WorkerReportsProgress = true;
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(15, 340);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(744, 14);
+            this.progressBar.Step = 1;
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar.TabIndex = 12;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(771, 337);
+            this.ClientSize = new System.Drawing.Size(771, 357);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pythonLocationTextBox);
             this.Controls.Add(this.pythonLocationBtn);
             this.Controls.Add(this.richTextBox);
@@ -191,8 +212,9 @@
             this.Controls.Add(this.performActionBtn);
             this.Controls.Add(this.OutputFolderPathText);
             this.Controls.Add(this.InputFolderPathText);
+            this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "MainForm";
-            this.Text = "Main Form";
+            this.Text = "Image Set Maniplator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +233,8 @@
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Button pythonLocationBtn;
         private System.Windows.Forms.TextBox pythonLocationTextBox;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
