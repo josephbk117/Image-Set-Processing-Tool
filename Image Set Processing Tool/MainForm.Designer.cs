@@ -76,7 +76,7 @@
             this.performActionBtn.TabIndex = 2;
             this.performActionBtn.Text = "Perform Action";
             this.performActionBtn.UseVisualStyleBackColor = false;
-            this.performActionBtn.Click += new System.EventHandler(this.performActionBtn_Click);
+            this.performActionBtn.Click += new System.EventHandler(this.PerformActionBtn_Click);
             // 
             // openFolderBtn
             // 
@@ -90,7 +90,7 @@
             this.openFolderBtn.TabIndex = 3;
             this.openFolderBtn.Text = "Open Folder";
             this.openFolderBtn.UseVisualStyleBackColor = false;
-            this.openFolderBtn.Click += new System.EventHandler(this.openFolderBtn_Click);
+            this.openFolderBtn.Click += new System.EventHandler(this.OpenFolderBtn_Click);
             // 
             // numberOfFilesLabel
             // 
@@ -116,7 +116,7 @@
             this.closeFolderBtn.TabIndex = 5;
             this.closeFolderBtn.Text = "Output Folder";
             this.closeFolderBtn.UseVisualStyleBackColor = false;
-            this.closeFolderBtn.Click += new System.EventHandler(this.closeFolderBtn_Click);
+            this.closeFolderBtn.Click += new System.EventHandler(this.CloseFolderBtn_Click);
             // 
             // label1
             // 
@@ -164,7 +164,7 @@
             this.pythonLocationBtn.TabIndex = 10;
             this.pythonLocationBtn.Text = "Python Location";
             this.pythonLocationBtn.UseVisualStyleBackColor = false;
-            this.pythonLocationBtn.Click += new System.EventHandler(this.pythonLocationBtn_Click);
+            this.pythonLocationBtn.Click += new System.EventHandler(this.PythonLocationBtn_Click);
             // 
             // pythonLocationTextBox
             // 
@@ -179,9 +179,9 @@
             // backgroundWorker
             // 
             this.backgroundWorker.WorkerReportsProgress = true;
-            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
-            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
-            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker_DoWork);
+            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorker_ProgressChanged);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker_RunWorkerCompleted);
             // 
             // progressBar
             // 
