@@ -38,8 +38,6 @@ namespace Image_Set_Processing_Tool
         private void OpenFolderBtn_Click(object sender, EventArgs e)
         {
             //TODO : Only use image files into the list.
-
-
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 filesInFolder = Directory.GetFiles(fbd.SelectedPath).ToList<string>();
